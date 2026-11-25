@@ -18,6 +18,7 @@
 - [收录标准](#收录标准)
 - [看过但没收的论文](#看过但没收的论文)
 - [参与贡献](#参与贡献)
+- [许可证](#许可证)
 
 ## 新人从哪读起
 
@@ -142,9 +143,9 @@
 
 **做了什么**：作者按操作任务搜索掌形、手指数和关节组合。用一个能读取手部结构参数的控制策略在仿真中给不同设计打分，再把候选手造出来。
 
-**结果**：`真机对照` 三款候选手和一款仿人手转动 17 个训练中没见过的物体，每件计时到掉落或满 1 分钟。手指围绕掌心布置的对称设计比仿人手转得更稳，真机排序与仿真预测一致。
+**结果**：`真机对照` 三款候选手和一款仿人手转动 17 个训练中没见过的物体，记录每件转满 360° 的用时，60 秒内没转满记为失败。手指围绕掌心布置的对称设计能转满一圈的物体比仿人手多，真机排序与仿真预测一致。
 
-**有什么用**：为掌内旋转选机械手时，可以把对称布局和仿人布局一起做对照，记录每件物体能转多久才掉。
+**有什么用**：为掌内旋转选机械手时，可以把对称布局和仿人布局一起做对照，记录每件物体转满一圈的用时和完成率。
 
 <details>
 <summary>实验细节与局限</summary>
@@ -212,6 +213,7 @@
 <summary>实验细节与局限</summary>
 
 - 刷卡结果汇总了 3 个训练随机种子。换皮对照使用的是同型传感器。
+- 换皮后基本不掉点只在刷卡任务上成立：插 USB 任务换皮后每 10 次成功从 5.7 次降到 3.0 次，验收要覆盖实际任务。
 - 论文于 2024 年发布 arXiv 预印本，正式发表于 ICRA 2025。
 
 </details>
@@ -492,7 +494,7 @@
 2026 年 11 月按“协同设计、形态与控制、数据采集装置、触觉与策略”几个方向在 arXiv 检索过。下面这些也值得一看，但和已收条目重复，或硬件、算法只改了一边：
 
 - **整机与数据采集**：[Pixel](https://arxiv.org/abs/2611.03648)（从硬件到软件整套一起设计的轮式人形机器人，可与第 17 篇对照看）、[Pixel-UMI](https://arxiv.org/abs/2611.03647)、[MILE](https://arxiv.org/abs/2512.00324)、[DexEXO](https://arxiv.org/abs/2603.17323)、[DEXOP](https://arxiv.org/abs/2509.04441)（都是用外骨骼采手部动作，和 DexUMI、DITTO 同类）、[Robot-Matched Soft Fingers for UMI](https://arxiv.org/abs/2611.03779)。
-- **传感器与观测**：[WARP-VLA](https://arxiv.org/abs/2610.11508)（腕部相机支架稍微偏一点，同一个策略成功率从 78% 掉到 36.7%）、[Tactile Sensors Are an Effective Substitute for Wrist Cameras](https://arxiv.org/abs/2611.10490)、[DexRemo](https://arxiv.org/abs/2611.15981)。
+- **传感器与观测**：[WARP-VLA](https://arxiv.org/abs/2610.11508)（腕部相机支架稍微偏一点，π₀.₅ 基线的真机成功率从 78% 掉到 36.7%）、[Tactile Sensors Are an Effective Substitute for Wrist Cameras](https://arxiv.org/abs/2611.10490)、[DexRemo](https://arxiv.org/abs/2611.15981)。
 - **身体与控制**：[Tactile In-Hand Object Rotation](https://arxiv.org/abs/2610.26759)（在 LEAP 手上比较对称布局和仿人布局转物体）、[SENSE-STEP](https://arxiv.org/abs/2602.13078)、[Physical Imitation Learning](https://arxiv.org/abs/2604.00611)（把策略“装进”并联弹性关节的机械结构里，仅仿真）、[Co-Design Gym](https://arxiv.org/abs/2610.02366)（协同设计的评测基准）、[Reset Dependence Is Embodied](https://arxiv.org/abs/2611.29518)（训练时的跌倒重置规则会改变哪种身体看起来更好）、[PACT: Pose-Robust Actuation Co-Design](https://arxiv.org/abs/2611.05302)（优化腱驱动手的传动参数，还在设计阶段）。
 - **执行**：[EmbodiSteer](https://arxiv.org/abs/2606.12965)（换一台机械臂部署时，引导动作避开连杆碰撞）。
 
@@ -503,6 +505,12 @@
 - **推荐论文**：请附论文链接，并用一两句话说明它改了哪部分硬件、哪部分算法，证据是真机对照、真机演示还是仿真。
 - **纠错**：链接失效、数字写错、作者或会议信息不对，都欢迎指出。
 
-新条目请照着正文已有条目的格式写：标题行、“做了什么 / 结果 / 有什么用”三行、折叠的实验细节。
+详细的收录要求和写法见 [CONTRIBUTING.md](CONTRIBUTING.md)。新条目请照着正文已有条目的格式写：标题行、“做了什么 / 结果 / 有什么用”三行、折叠的实验细节。
 
 最近核对：2026 年 11 月 25 日。
+
+## 许可证
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+本清单以 [CC0 1.0](LICENSE) 发布，和 [sindresorhus/awesome](https://github.com/sindresorhus/awesome) 一样：放弃版权，可以自由复制、修改和商用，不用署名。所列论文的版权归各自作者。
